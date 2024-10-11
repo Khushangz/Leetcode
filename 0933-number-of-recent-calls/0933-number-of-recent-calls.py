@@ -2,11 +2,9 @@ class RecentCounter:
 
     def __init__(self):
         self.time=[]
-        self.count=0
 
     def ping(self, t: int) -> int:
         A=self.time
-        B=[]
         A.append(t)
         k=0
         for i in range(len(A)):
@@ -14,8 +12,7 @@ class RecentCounter:
                 k=i
                 break
         self.time=A[k:]
-        self.count=len(A[k:])
-        return self.count
+        return len(A[k:])
 
 
 
